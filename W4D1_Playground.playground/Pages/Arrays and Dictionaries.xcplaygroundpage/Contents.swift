@@ -19,19 +19,21 @@ myDictionary["Principal"] = 1
  - Experiment:
  Try creating an array and dictionary using `'let'` vs `'var'` then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
  */
-
+var cities = ["Vancouver", "Montreal"]
+cities.append("Toronto")
 
 /*:
  - Experiment:
  Try creating an empty array with an explicit type `[type]`. What happens when you add a value that isn't the same type?
  */
-
+var airports:[String] = []
+airports.append("6")
 
 /*:
  - Experiment:
  Try creating an empty dictionary with an explicit type. `[keyType: valueType]`
  */
-
+var airportCodes = ["YVR": "Vancouver", "SFO": "San Francisco"]
 
 /*:
  - Experiment:
@@ -43,8 +45,14 @@ myDictionary["Principal"] = 1
  - reverse
  - count
  */
-
-
+var airportCodes2 = ["YVR", "SFO"]
+airportCodes2.append("HKG")
+print(airportCodes2)
+airportCodes2.insert("HGG", at: 0)
+airportCodes2.remove(at: 0)
+airportCodes2.reverse()
+print (airportCodes2)
+airportCodes2.count
 /*:
  - Experiment:
  Create a dictionary with any values of your choice. Play around with accessing a value by its key. Try keys using different case sensitivity, what happens? Then try playing with the following methods of a dictionary and find out what they do:
@@ -52,16 +60,24 @@ myDictionary["Principal"] = 1
  - isEmpty
  - count
  */
-
-
+var airportDictionary = ["YVR": "Vancouver", "SFO": "San Francisco"]
+airportDictionary.removeValue(forKey: "YVR")
+print (airportDictionary.isEmpty)
+print (airportDictionary.count)
 /*:
  - Callout(Challenge):
     Declare a mutable array that is empty and holds `Strings`. On the next few lines, add the following names to the array: John, Karen, Jane
  
     Finally, print out each person's name from the array using their index and string interpolation
 */
+var people:[String] = []
+people.append("John")
+people.append("Karen")
+people.append("jane")
 
-
+print("\(people[0])")
+print("\(people[1])")
+print("\(people[2])")
 /*:
  - Callout(Challenge):
   Declare a mutable dictionary with the following names and their salaries
@@ -74,6 +90,12 @@ myDictionary["Principal"] = 1
  
     On the next line, add this last person's info: Bob - $45000
  */
+var salary = ["John": 50000,
+              "Jane": 70000,
+              "Karen": 62000]
+salary["Bob"] = 45000
+print (salary)
+
 
 
 //: [Next](@next)

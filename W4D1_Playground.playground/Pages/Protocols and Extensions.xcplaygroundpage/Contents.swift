@@ -204,5 +204,5 @@ extension Double{
 
 var seconds:Double = 900
 seconds.convertSecondsToMinutes()
-seconds.convertSecondsToHours()s
+seconds.convertSecondsToHours()
 //: [Next](@next)
